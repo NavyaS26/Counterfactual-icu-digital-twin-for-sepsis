@@ -1,20 +1,72 @@
-<<<<<<< HEAD
-# React + Vite
+# 🏥 Causal-ICU: Counterfactual Treatment Decision Engine for Septic Shock
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Causal-ICU is an AI-powered clinical decision support system that identifies the optimal time to transition septic shock patients from IV fluids to vasopressors using causal inference and counterfactual reasoning.
 
-Currently, two official plugins are available:
+Unlike traditional prediction models, Causal-ICU estimates:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Survival probability if IV fluids are continued
+* Survival probability if vasopressors are initiated
+* Individual Treatment Effect (ITE)
+* Patient-specific intervention windows
 
-## React Compiler
+The system is trained on the MIMIC-III sepsis cohort and provides real-time treatment recommendations through an interactive ICU simulation dashboard.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+* T-Learner-based causal inference engine
+* Counterfactual treatment outcome simulation
+* Individual Treatment Effect (ITE) estimation
+* Real-time ICU digital twin visualization
+* Explainable AI recommendation panel
+* Non-survivor rescue analysis
+* Missed intervention window detection
+* Vital trajectory forecasting
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Counterfactual-icu-digital-twin-for-sepsis
->>>>>>> 5890c9b912d01744b6dc47cac2b42ce601f98869
+## 🏗 Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* Recharts
+
+### Machine Learning
+
+* Python
+* Scikit-Learn
+* Gradient Boosting Regressors
+
+### Causal Framework
+
+* Potential Outcomes Framework
+* T-Learner Metalearner
+
+### Dataset
+
+* MIMIC-III ICU Database
+
+## 📂 Architecture
+
+MIMIC-III Data
+↓
+Data Extraction
+↓
+T-Learner Training
+↓
+Counterfactual Models
+↓
+React Dashboard
+↓
+Treatment Decision Support
+
+## 🎯 Impact
+
+Causal-ICU helps clinicians answer a critical question:
+
+> "What would happen if we changed treatment right now?"
+
+By estimating patient-specific treatment effects, the system enables earlier, more informed intervention decisions in septic shock management and demonstrates the potential of causal AI in critical care.
+
+## ⚠️ Disclaimer
+
+This project is intended for research, educational, and demonstration purposes only. It is not FDA-approved and should not be used as a substitute for professional medical judgment or clinical decision-making.
